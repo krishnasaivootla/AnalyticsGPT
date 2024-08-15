@@ -89,7 +89,6 @@ with st.sidebar:
 llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613")
 query = st.text_input("Ask a question about the uploaded dataset:")
 
-
 # col1, col2 = st.columns([1,1])
 # with col1:
 if st.button('Run Query'):
