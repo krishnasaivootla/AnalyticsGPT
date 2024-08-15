@@ -207,49 +207,49 @@ plt.show()
 
 """
 
-# with col2:
-if st.button("Summarize DataFrame"):
-    print("\n\n\n\n\n\n=====================================================================")
+# # with col2:
+# if st.button("Summarize DataFrame"):
+#     print("\n\n\n\n\n\n=====================================================================")
 
-    print("Running python generation chat...", end= "")
-    query = "generate a summary plot for each column of the dataframe. Put all the plots in a subplot with 3 plots per row. Decide which plot to use based on the data type of the column & if the column is categorical, also use the number of unique values in it. Make sure to add proper colors to distinguish everything. If possible add a plots to look at correlations as well. Only use matplotlib"
-    # template = build_chat_prompt_template(df, query)
-    # response = llm(template.format_messages(question=query))
-    print("Done")
-    # print(response)
+#     print("Running python generation chat...", end= "")
+#     query = "generate a summary plot for each column of the dataframe. Put all the plots in a subplot with 3 plots per row. Decide which plot to use based on the data type of the column & if the column is categorical, also use the number of unique values in it. Make sure to add proper colors to distinguish everything. If possible add a plots to look at correlations as well. Only use matplotlib"
+#     # template = build_chat_prompt_template(df, query)
+#     # response = llm(template.format_messages(question=query))
+#     print("Done")
+#     # print(response)
 
-    # match = re.search(r'```(.*?)```', str(response), re.DOTALL)
+#     # match = re.search(r'```(.*?)```', str(response), re.DOTALL)
     
-    # if match:
-        # python_code = match.group(1).strip().replace("python", "")[2:].replace('\\n', '\n').strip()
-        # python_code = re.sub(r'^.*read_csv.*$\n?', '', python_code, flags=re.MULTILINE)
-        # print("------ Python Code ------\n", python_code)
+#     # if match:
+#         # python_code = match.group(1).strip().replace("python", "")[2:].replace('\\n', '\n').strip()
+#         # python_code = re.sub(r'^.*read_csv.*$\n?', '', python_code, flags=re.MULTILINE)
+#         # print("------ Python Code ------\n", python_code)
 
-    import time
+#     import time
 
-    # progress_text = "Operation in progress. Please wait."
-    # my_bar = st.progress(0, text=progress_text)
+#     # progress_text = "Operation in progress. Please wait."
+#     # my_bar = st.progress(0, text=progress_text)
 
-    # for percent_complete in range(100):
-    #     time.sleep(0.01)
-    #     my_bar.progress(percent_complete + 1, text=progress_text)
-    # time.sleep(1)
-    # my_bar.empty()
+#     # for percent_complete in range(100):
+#     #     time.sleep(0.01)
+#     #     my_bar.progress(percent_complete + 1, text=progress_text)
+#     # time.sleep(1)
+#     # my_bar.empty()
 
 
-    # with st.progress("Runnig:"):
-    import time
-    time.sleep(7)
-    try:
-        plot_area = st.empty()
-        exec(summarize_cd, globals())
-        plot_area.pyplot(plt)
-    except Exception as e:
-        print(f"Error: {e}")
-        st.write("Error building Plot")
-    # else:
-    #     print("Response content: ", response)
-    #     print("Error reading python code\n", match)
-    #     st.write("Error reading python code\n", match)
+#     # with st.progress("Runnig:"):
+#     import time
+#     time.sleep(7)
+#     try:
+#         plot_area = st.empty()
+#         exec(summarize_cd, globals())
+#         plot_area.pyplot(plt)
+#     except Exception as e:
+#         print(f"Error: {e}")
+#         st.write("Error building Plot")
+#     # else:
+#     #     print("Response content: ", response)
+#     #     print("Error reading python code\n", match)
+#     #     st.write("Error reading python code\n", match)
 
 
