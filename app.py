@@ -73,7 +73,7 @@ with st.sidebar:
         
         # Create the agent with the loaded DataFrame
         agent = create_pandas_dataframe_agent(
-            ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613"),
+            ChatOpenAI(temperature=0, model="GPT-4o mini"),
             df,
             verbose=True,
             agent_type=AgentType.OPENAI_FUNCTIONS,
@@ -86,7 +86,7 @@ with st.sidebar:
 # Query Input
 
 
-llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613")
+llm = ChatOpenAI(temperature=0, model="GPT-4o mini")
 query = st.text_input("Ask a question about the uploaded dataset:")
 
 # col1, col2 = st.columns([1,1])
